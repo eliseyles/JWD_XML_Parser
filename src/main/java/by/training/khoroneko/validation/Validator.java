@@ -1,6 +1,6 @@
 package by.training.khoroneko.validation;
 
-import by.training.khoroneko.exceprion.XMLValidatorException;
+import by.training.khoroneko.exception.XMLValidatorException;
 import org.apache.log4j.Logger;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
@@ -32,7 +32,6 @@ public class Validator extends DefaultHandler {
             Schema schema = factory.newSchema(new File(Objects.requireNonNull(getClass().getClassLoader().getResource(schemaName)).getFile()));
             javax.xml.validation.Validator validator = schema.newValidator();
             validator.setErrorHandler(this);
-            System.out.println(validator.toString());
             validator.validate(new StreamSource(inputStream));
         } catch (IOException | SAXException e) {
             LOGGER.warn("Invalid file: " + e.getMessage());

@@ -1,4 +1,4 @@
-package by.training.khoroneko.exceprion;
+package by.training.khoroneko.exception;
 
 public class XMLValidatorException extends Exception {
     public XMLValidatorException() {
