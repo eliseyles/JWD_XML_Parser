@@ -14,7 +14,7 @@
     <xsd:complexType name="candy">
         <xsd:sequence>
             <xsd:element name="name" type="xsd:string"/>
-            <xsd:element name="energy" type="xsd:positiveInteger"/>
+            <xsd:element name="energy" type="xsd:nonNegativeInteger"/>
             <xsd:element name="type" type="type"/>
             <xsd:element name="ingredients" type="ingredients"/>
             <xsd:element name="value" type="value"/>
@@ -25,17 +25,17 @@
 
     <xsd:complexType name="value">
         <xsd:all>
-            <xsd:element name="protein" type="xsd:positiveInteger"/>
-            <xsd:element name="fat" type="xsd:positiveInteger"/>
-            <xsd:element name="carbohydrates" type="xsd:positiveInteger"/>
+            <xsd:element name="protein" type="xsd:nonNegativeInteger"/>
+            <xsd:element name="fat" type="xsd:nonNegativeInteger"/>
+            <xsd:element name="carbohydrates" type="xsd:nonNegativeInteger"/>
         </xsd:all>
     </xsd:complexType>
 
     <xsd:complexType name="ingredients">
         <xsd:all>
-            <xsd:element name="water" type="xsd:positiveInteger"/>
-            <xsd:element name="sugar" type="xsd:positiveInteger"/>
-            <xsd:element name="fructose" type="xsd:positiveInteger"/>
+            <xsd:element name="water" type="xsd:nonNegativeInteger"/>
+            <xsd:element name="sugar" type="xsd:nonNegativeInteger"/>
+            <xsd:element name="fructose" type="xsd:nonNegativeInteger"/>
             <xsd:element name="chocolate_type" type="chocolate_type"/>
         </xsd:all>
     </xsd:complexType>

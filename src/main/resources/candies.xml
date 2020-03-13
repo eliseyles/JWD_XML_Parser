@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <candies>
-    <candy id="1">
+    <candy id="ID1">
         <name>Korivka</name>
         <energy>123</energy>
         <type>caramel</type>
@@ -17,7 +17,7 @@
         </value>
         <production>Roshen</production>
     </candy>
-    <candy id="2">
+    <candy id="ID2">
         <name>Bjelka</name>
         <energy>1488</energy>
         <type>chocolate with filing</type>
@@ -34,7 +34,7 @@
         </value>
         <production>str1234</production>
     </candy>
-    <candy id="3">
+    <candy id="ID3">
         <name>LMAO</name>
         <energy>420</energy>
         <type>chocolate without filing</type>
