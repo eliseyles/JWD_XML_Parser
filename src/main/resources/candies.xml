@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<candies>
+    <candy id="1">
+        <name>Korivka</name>
+        <energy>123</energy>
+        <type>caramel</type>
+        <ingredients>
+            <water>100</water>
+            <sugar>50</sugar>
+            <fructose>7</fructose>
+            <chocolate_type>none</chocolate_type>
+        </ingredients>
+        <value>
+            <protein>11</protein>
+            <fat>14</fat>
+            <carbohydrates>50</carbohydrates>
+        </value>
+        <production>Roshen</production>
+    </candy>
+    <candy id="2">
+        <name>Bjelka</name>
+        <energy>1488</energy>
+        <type>chocolate with filing</type>
+        <ingredients>
+            <water>745</water>
+            <sugar>745</sugar>
+            <fructose>745</fructose>
+            <chocolate_type>milk</chocolate_type>
+        </ingredients>
+        <value>
+            <protein>745</protein>
+            <fat>745</fat>
+            <carbohydrates>745</carbohydrates>
+        </value>
+        <production>str1234</production>
+    </candy>
+    <candy id="3">
+        <name>LMAO</name>
+        <energy>420</energy>
+        <type>chocolate without filing</type>
+        <ingredients>
+            <water>69</water>
+            <sugar>228</sugar>
+            <fructose>322</fructose>
+            <chocolate_type>milk</chocolate_type>
+        </ingredients>
+        <value>
+            <protein>1488</protein>
+            <fat>0</fat>
+            <carbohydrates>0</carbohydrates>
+        </value>
+        <production>epico</production>
+    </candy>
+</candies>
