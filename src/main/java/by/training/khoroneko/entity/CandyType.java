@@ -14,4 +14,14 @@ public enum CandyType {
     public String getType() {
         return type;
     }
+
+    public static CandyType getCandyTypeByValue(String value) {
+        CandyType[] values = CandyType.values();
+        for (CandyType candyType : values) {
+            if(candyType.getType().equals(value)){
+                return candyType;
+            }
+        }
+        throw new IllegalArgumentException();
+    }
 }

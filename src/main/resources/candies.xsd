@@ -24,11 +24,11 @@
     </xsd:complexType>
 
     <xsd:complexType name="value">
-        <xsd:all>
+        <xsd:sequence>
             <xsd:element name="protein" type="xsd:nonNegativeInteger"/>
             <xsd:element name="fat" type="xsd:nonNegativeInteger"/>
             <xsd:element name="carbohydrates" type="xsd:nonNegativeInteger"/>
-        </xsd:all>
+        </xsd:sequence>
     </xsd:complexType>
 
     <xsd:complexType name="ingredients">

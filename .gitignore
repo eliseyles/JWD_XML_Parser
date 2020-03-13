@@ -187,3 +187,4 @@ hs_err_pid*
 /.idea/
 /JWD_XML_Parser.iml
 /target/
+/src/main/java/by/training/khoroneko/runner/

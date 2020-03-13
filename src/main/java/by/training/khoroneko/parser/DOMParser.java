@@ -11,6 +11,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -30,14 +31,14 @@ public class DOMParser {
         }
     }
 
-    public Set<Candy> getStudents() {
+    public Set<Candy> getCandies() {
         return candies;
     }
 
-    public void buildSetCandies(String fileName) {
+    public void buildSetCandies(InputStream file) {
         Document doc = null;
         try {
-            doc = docBuilder.parse(fileName);
+            doc = docBuilder.parse(file);
             Element root = doc.getDocumentElement();
 
             NodeList candyList = root.getElementsByTagName("candy");
