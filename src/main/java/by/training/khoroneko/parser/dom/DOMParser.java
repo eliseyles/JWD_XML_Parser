@@ -1,10 +1,15 @@
-package by.training.khoroneko.parser;
+package by.training.khoroneko.parser.dom;
 
 import by.training.khoroneko.builder.CandyBuilder;
 import by.training.khoroneko.entity.*;
+import by.training.khoroneko.exception.ParserException;
+import by.training.khoroneko.parser.CandyTag;
+import by.training.khoroneko.parser.Parser;
+import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -15,7 +20,8 @@ import java.io.InputStream;
 import java.util.HashSet;
 import java.util.Set;
 
-public class DOMParser {
+public class DOMParser implements Parser {
+    private Logger logger = Logger.getLogger(DOMParser.class);
     private Set<Candy> candies;
     private DocumentBuilder docBuilder;
     private CandyBuilder candyBuilder;
@@ -27,30 +33,34 @@ public class DOMParser {
         try {
             docBuilder = factory.newDocumentBuilder();
         } catch (ParserConfigurationException e) {
-            System.err.println("Parser configuration error: " + e);
+            logger.error("Parser configuration error: " + e);
         }
     }
 
+    @Override
     public Set<Candy> getCandies() {
         return candies;
     }
 
-    public void buildSetCandies(InputStream file) {
+    @Override
+    public void buildCandies(InputStream file) throws ParserException{
         Document doc = null;
         try {
             doc = docBuilder.parse(file);
             Element root = doc.getDocumentElement();
 
-            NodeList candyList = root.getElementsByTagName("candy");
+            NodeList candyList = root.getElementsByTagName(CandyTag.CANDY.getTagName());
             for (int i = 0; i < candyList.getLength(); i++) {
                 Element candyElement = (Element) candyList.item(i);
                 Candy candy = candyBuilder.buildCandy(candyElement);
                 candies.add(candy);
             }
         } catch (IOException e) {
-            System.err.println("File error or I/O error: " + e);
+            logger.error("File error or I/O error: " + e);
+            throw new ParserException("File error");
         } catch (SAXException e) {
-            System.err.println("Parsing failure: " + e);
+            logger.error("Parsing failure: " + e);
+            throw new ParserException("Parsing error");
         }
     }
 }
