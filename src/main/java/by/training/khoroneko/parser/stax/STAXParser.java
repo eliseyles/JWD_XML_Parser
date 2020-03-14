@@ -51,6 +51,7 @@ public class STAXParser implements Parser {
 
     private Candy getXMLCandy(XMLStreamReader reader) throws XMLStreamException {
         Candy candy = new Candy();
+        candy.setId(reader.getAttributeValue(0));
         while (reader.hasNext()) {
             switch (reader.next()) {
                 case XMLStreamConstants.START_ELEMENT:
