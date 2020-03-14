@@ -43,7 +43,7 @@ public class DOMParser implements Parser {
     }
 
     @Override
-    public void buildCandies(InputSource file) throws ParserException{
+    public void buildCandies(InputStream file) throws ParserException{
         Document doc = null;
         try {
             doc = docBuilder.parse(file);

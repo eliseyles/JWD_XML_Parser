@@ -10,6 +10,7 @@ import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -37,9 +38,9 @@ public class SAXParser implements Parser {
     }
 
     @Override
-    public void buildCandies(InputSource file) throws ParserException {
+    public void buildCandies(InputStream file) throws ParserException {
         try {
-            reader.parse(file);
+            reader.parse(new InputSource(file));
             candies.addAll(handler.getCandies());
         } catch (IOException | SAXException e) {
             logger.error(e);
