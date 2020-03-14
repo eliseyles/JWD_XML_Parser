@@ -57,10 +57,10 @@ public class DOMParser implements Parser {
             }
         } catch (IOException e) {
             logger.error("File error or I/O error: " + e);
-            throw new ParserException();
+            throw new ParserException("File error");
         } catch (SAXException e) {
             logger.error("Parsing failure: " + e);
-            throw new ParserException();
+            throw new ParserException("Parsing error");
         }
     }
 }

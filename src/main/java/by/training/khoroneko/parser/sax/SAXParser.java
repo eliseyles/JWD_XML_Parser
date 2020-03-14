@@ -43,6 +43,7 @@ public class SAXParser implements Parser {
             candies.addAll(handler.getCandies());
         } catch (IOException | SAXException e) {
             logger.error(e);
+            throw new ParserException();
         }
     }
 }
