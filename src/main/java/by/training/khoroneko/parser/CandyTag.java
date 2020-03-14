@@ -1,6 +1,8 @@
 package by.training.khoroneko.parser;
 
 public enum CandyTag {
+    CANDIES("candies"),
+    CANDY("candy"),
     ID("id"),
     ENERGY("energy"),
     NAME("name"),
