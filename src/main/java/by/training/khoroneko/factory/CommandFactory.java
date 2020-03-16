@@ -1,8 +1,8 @@
-package by.training.xmlparser.factory;
+package by.training.khoroneko.factory;
 
-import by.training.xmlparser.command.Command;
-import by.training.xmlparser.command.CommandParameter;
-import by.training.xmlparser.command.JSPParameter;
+import by.training.khoroneko.command.Command;
+import by.training.khoroneko.command.CommandParameter;
+import by.training.khoroneko.command.JSPParameter;
 
 import javax.servlet.http.HttpServletRequest;
 

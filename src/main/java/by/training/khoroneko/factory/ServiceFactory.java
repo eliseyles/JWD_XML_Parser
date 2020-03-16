@@ -1,9 +1,9 @@
-package by.training.xmlparser.factory;
+package by.training.khoroneko.factory;
 
-import by.training.xmlparser.service.ParserService;
-import by.training.xmlparser.service.impl.DOMParserService;
-import by.training.xmlparser.service.impl.SAXParserService;
-import by.training.xmlparser.service.impl.STAXParserService;
+import by.training.khoroneko.service.ParserService;
+import by.training.khoroneko.service.impl.DOMParserService;
+import by.training.khoroneko.service.impl.SAXParserService;
+import by.training.khoroneko.service.impl.STAXParserService;
 
 public enum ServiceFactory {
     INSTANCE;
