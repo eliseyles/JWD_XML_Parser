@@ -1,4 +1,4 @@
-package by.training.xmlparser.command;
+package by.training.khoroneko.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

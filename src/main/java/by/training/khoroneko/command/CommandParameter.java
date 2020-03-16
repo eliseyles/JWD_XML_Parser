@@ -1,9 +1,9 @@
-package by.training.xmlparser.command;
+package by.training.khoroneko.command;
 
-import by.training.xmlparser.command.redirect.DOMCommand;
-import by.training.xmlparser.command.redirect.IndexPageCommand;
-import by.training.xmlparser.command.redirect.SAXCommand;
-import by.training.xmlparser.command.redirect.STAXCommand;
+import by.training.khoroneko.command.redirect.DOMCommand;
+import by.training.khoroneko.command.redirect.IndexPageCommand;
+import by.training.khoroneko.command.redirect.SAXCommand;
+import by.training.khoroneko.command.redirect.STAXCommand;
 
 public enum CommandParameter {
     DOM_PARSE(new DOMCommand()),

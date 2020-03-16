@@ -1,4 +1,4 @@
-package by.training.xmlparser.command;
+package by.training.khoroneko.command;
 
 public enum JSPParameter {
     COMMAND("command"),

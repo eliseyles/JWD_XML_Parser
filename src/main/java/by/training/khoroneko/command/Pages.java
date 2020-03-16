@@ -1,4 +1,4 @@
-package by.training.xmlparser.command;
+package by.training.khoroneko.command;
 
 public enum Pages {
     INDEX_JSP("page/index.jsp"),

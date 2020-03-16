@@ -1,11 +1,11 @@
-package by.training.xmlparser.command.redirect;
+package by.training.khoroneko.command.redirect;
 
-import by.training.xmlparser.command.Command;
-import by.training.xmlparser.command.JSPParameter;
-import by.training.xmlparser.command.Pages;
-import by.training.xmlparser.entity.Tariff;
-import by.training.xmlparser.exception.ServiceException;
-import by.training.xmlparser.factory.ServiceFactory;
+import by.training.khoroneko.command.Command;
+import by.training.khoroneko.command.JSPParameter;
+import by.training.khoroneko.command.Pages;
+import by.training.khoroneko.entity.Candy;
+import by.training.khoroneko.exception.ServiceException;
+import by.training.khoroneko.factory.ServiceFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -18,14 +18,14 @@ public class SAXCommand implements Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
         String page;
-        Set<Tariff> tariffs;
+        Set<Candy> candies;
         try {
             Part part = request.getPart(JSPParameter.FILE.getValue());
-            tariffs = ServiceFactory.INSTANCE.getSAXParserService().parse(part);
-            request.setAttribute("tariffs", tariffs);
+            candies = ServiceFactory.INSTANCE.getSAXParserService().parse(part);
+            request.setAttribute("candies", candies);
             page = Pages.RESULT_JSP.getValue();
         } catch (ServletException | IOException | ServiceException e) {
-            String message = "your SAX is not s3xy enough";
+            String message = "Something goes wrong";
             request.setAttribute("informMessage", message);
             page = Pages.INFORMER_PAGE_JSP.getValue();
         }

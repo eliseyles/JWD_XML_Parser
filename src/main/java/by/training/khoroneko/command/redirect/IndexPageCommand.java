@@ -1,7 +1,7 @@
-package by.training.xmlparser.command.redirect;
+package by.training.khoroneko.command.redirect;
 
-import by.training.xmlparser.command.Command;
-import by.training.xmlparser.command.Pages;
+import by.training.khoroneko.command.Command;
+import by.training.khoroneko.command.Pages;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
