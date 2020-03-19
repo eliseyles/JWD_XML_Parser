@@ -7,7 +7,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class CandyBuilder {
-
     public Candy buildCandy(Element candyElement) {
         Candy candy = new Candy();
         candy.setId(candyElement.getAttribute(CandyTag.ID.getTagName()));
@@ -26,8 +25,8 @@ public class CandyBuilder {
         //set value
         Value value = new Value();
         Element valueElement = (Element) candyElement.getElementsByTagName(CandyTag.VALUE.getTagName()).item(0);
-        value.setProtein(Integer.parseInt(getElementTextContent(valueElement, CandyTag.PROTEIN.getTagName())));
         value.setFat(Integer.parseInt(getElementTextContent(valueElement, CandyTag.FAT.getTagName())));
+        value.setProtein(Integer.parseInt(getElementTextContent(valueElement, CandyTag.PROTEIN.getTagName())));
         value.setCarbohydrates(Integer.parseInt(getElementTextContent(valueElement, CandyTag.CARBOHYDRATES.getTagName())));
         candy.setValue(value);
         //set production

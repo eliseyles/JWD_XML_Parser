@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-
     <xsd:element name="candies">
         <xsd:complexType>
             <xsd:sequence>
@@ -9,7 +7,6 @@
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
-
 
     <xsd:complexType name="candy">
         <xsd:sequence>
@@ -32,12 +29,12 @@
     </xsd:complexType>
 
     <xsd:complexType name="ingredients">
-        <xsd:all>
+        <xsd:sequence>
             <xsd:element name="water" type="xsd:nonNegativeInteger"/>
             <xsd:element name="sugar" type="xsd:nonNegativeInteger"/>
             <xsd:element name="fructose" type="xsd:nonNegativeInteger"/>
             <xsd:element name="chocolate_type" type="chocolate_type"/>
-        </xsd:all>
+        </xsd:sequence>
     </xsd:complexType>
 
     <xsd:simpleType name="type">
