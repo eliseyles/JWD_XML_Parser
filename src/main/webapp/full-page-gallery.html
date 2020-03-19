@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Welcome</title>
+    <title>Result</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <!-- Bootstrap core CSS -->
@@ -35,16 +35,48 @@
 <body>
 
 <!-- Navbar -->
-<%@include file="jspheader/nav.jsp" %>
-<!-- Navbar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
 
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.jsp" target="_blank">
+            <strong>Home</strong>
+        </a>
+
+        <!-- Collapse -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--      &lt;!&ndash; Links &ndash;&gt;-->
+        <!--      <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+
+        <!--        &lt;!&ndash; Left &ndash;&gt;-->
+        <!--        <ul class="navbar-nav mr-auto">-->
+        <!--          <li class="nav-item active">-->
+        <!--            <a class="nav-link" href="#">Home-->
+        <!--              <span class="sr-only">(current)</span>-->
+        <!--            </a>-->
+        <!--          </li>-->
+        <!--          <li class="nav-item">-->
+        <!--            <a class="nav-link" href="https://mdbootstrap.com/docs/jquery/" target="_blank">About MDB</a>-->
+        <!--        </ul>       -->
+
+        <!--      </div>-->
+
+    </div>
+</nav>
+<!-- Navbar -->
+<!-- data-ride="carousel" -->
 <!--Carousel Wrapper-->
 <div id="carousel-example-1z" class="carousel slide carousel-fade">
 
     <!--Slides-->
     <div class="carousel-inner" role="listbox">
 
-        <%--        <!--First slide-->--%>
+        <!--First slide-->
         <div class="carousel-item active">
             <div class="view">
 
@@ -56,7 +88,7 @@
                 <!-- Mask & flexbox options-->
                 <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
 
-                    <form action="controller" method="post" enctype='multipart/form-data'>
+                    <form>
 
                         <div class="container white-text mt-4 wow fadeIn">
 
@@ -108,12 +140,12 @@
                                                     value="parse">
                                                 Parse
                                             </button>
-                                            <%--                                            <button type="submit" class="btn-outline-white btn-lg" name="command" value="parse">Parse</button>&ndash;%&gt;--%>
                                         </div>
                                     </div>
                                 </div>
                             </section>
                             <!--Section: Main info-->
+
                         </div>
                     </form>
 
@@ -127,23 +159,22 @@
     </div>
 </div>
 
-<!--/.Footer-->
+    <!--/.Footer-->
 
-<!-- SCRIPTS -->
-<!-- JQuery -->
-<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="js/popper.min.js"></script>
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="js/mdb.min.js"></script>
-<!-- Initializations -->
-<script type="text/javascript">
-    // Animations initialization
-    new WOW().init();
-</script>
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Initializations -->
+    <script type="text/javascript">
+        // Animations initialization
+        new WOW().init();
+    </script>
 </body>
 
 </html>
-
