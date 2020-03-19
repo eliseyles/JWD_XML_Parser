@@ -24,20 +24,21 @@
         </tr>
         </thead>
         <tbody>
-<%--        <c:forEach var="tariff" items="${tariffs}">--%>
-<%--            <tr>--%>
-<%--                <td>${tariff.name}</td>--%>
-<%--                <td>${tariff.operatorName}</td>--%>
-<%--                <td>${tariff.pay roll}</td>--%>
-<%--                <td>${tariff.SMSPrice}</td>--%>
-<%--                <td>${tariff.callPrice.withinNetworkPrice}</td>--%>
-<%--                <td>${tariff.callPrice.otherNetworkPrice}</td>--%>
-<%--                <td>${tariff.callPrice.standardPhoneNumbersPrice}</td>--%>
-<%--                <td>${tariff.parameters.containsFavouritePhoneNumbers}</td>--%>
-<%--                <td>${tariff.parameters.tariffing}</td>--%>
-<%--                <td>${tariff.parameters.connectionCost}</td>--%>
-<%--            </tr>--%>
-<%--        </c:forEach>--%>
+        <c:forEach var="candy" items="${candies}">
+            <tr>
+                <td>${candy.name}</td>
+                <td>${candy.candyType.type}</td>
+                <td>${candy.production}</td>
+                <td>${candy.value.fat}</td>
+                <td>${candy.value.protein}</td>
+                <td>${candy.value.carbohydrates}</td>
+                <td>${candy.energy}</td>
+                <td>${candy.ingredient.water}</td>
+                <td>${candy.ingredient.sugar}</td>
+                <td>${candy.ingredient.fructose}</td>
+                <td>${candy.ingredient.chocolateType}</td>
+            </tr>
+        </c:forEach>
         </tbody>
     </table>
 </div>

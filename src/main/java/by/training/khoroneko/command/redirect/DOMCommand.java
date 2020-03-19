@@ -1,11 +1,13 @@
 package by.training.khoroneko.command.redirect;
 
+import by.training.khoroneko.command.Attribute;
 import by.training.khoroneko.command.Command;
 import by.training.khoroneko.command.JSPParameter;
 import by.training.khoroneko.command.Pages;
 import by.training.khoroneko.entity.Candy;
 import by.training.khoroneko.exception.ServiceException;
 import by.training.khoroneko.factory.ServiceFactory;
+import com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -22,11 +24,11 @@ public class DOMCommand implements Command {
         try {
             Part part = request.getPart(JSPParameter.FILE.getValue());
             candies = ServiceFactory.INSTANCE.getDOMParserService().parse(part);
-            request.setAttribute("candies", candies);
+            request.setAttribute(Attribute.CANDIES.getValue(), candies);
             page = Pages.RESULT_JSP.getValue();
         } catch (ServletException | IOException | ServiceException e) {
-            String message = "Something goes wrong";
-            request.setAttribute("informMessage", message);
+            String message = "Something goes wrong1";
+            request.setAttribute(Attribute.INFORM_MESSAGE.getValue(), message);
             page = Pages.INFORMER_PAGE_JSP.getValue();
         }
         return page;

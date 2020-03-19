@@ -1,5 +1,6 @@
 package by.training.khoroneko.command.redirect;
 
+import by.training.khoroneko.command.Attribute;
 import by.training.khoroneko.command.Command;
 import by.training.khoroneko.command.JSPParameter;
 import by.training.khoroneko.command.Pages;
@@ -22,11 +23,11 @@ public class STAXCommand implements Command {
         try {
             Part part = request.getPart(JSPParameter.FILE.getValue());
             candies = ServiceFactory.INSTANCE.getSTAXParserService().parse(part);
-            request.setAttribute("candies", candies);
+            request.setAttribute(Attribute.CANDIES.getValue(), candies);
             page = Pages.RESULT_JSP.getValue();
         } catch (ServletException | IOException | ServiceException e) {
             String message = "Something goes wrong";
-            request.setAttribute("informMessage", message);
+            request.setAttribute(Attribute.INFORM_MESSAGE.getValue(), message);
             page = Pages.INFORMER_PAGE_JSP.getValue();
         }
         return page;
